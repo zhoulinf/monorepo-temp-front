@@ -1,0 +1,17 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private":true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "zhoulinfeng",
+  "engines": {
+    "node": ">=20.16.0",
+    "pnpm": ">=9.6.0"
+  },
+  "license": "ISC"
+}
