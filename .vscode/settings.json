@@ -1,0 +1,52 @@
+{
+    "editor.formatOnSave": false,
+    "editor.formatOnSaveMode": "file",
+    "eslint.format.enable": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+    },
+    "eslint.validate": [
+        "javascript",
+        "typescript",
+        "javascriptreact",
+        "typescriptreact",
+        "vue"
+    ],
+    "stylelint.enable": true,
+    "stylelint.snippet": [
+        "css",
+        "less",
+        "postcss",
+        "vue",
+        "sass"
+    ],
+    "stylelint.validate": [
+        "css",
+        "less",
+        "postcss",
+        "vue",
+        "sass"
+    ],
+    "[scss]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "stylelint.vscode-stylelint"
+    },
+    "[css]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "stylelint.vscode-stylelint"
+    },
+    "eslint.alwaysShowStatus": true,
+    "files.eol": "\n",
+    "files.associations": {
+        "*.js": "javascript",
+        "*.jsx": "javascriptreact",
+        "*.ts": "typescript",
+        "*.tsx": "typescriptreact",
+        "*.vue": "vue",
+        "*.html": "html"
+    },
+    "cSpell.words": [
+        "stylelint",
+        "zhoulinfeng"
+    ],
+}
