@@ -28,14 +28,11 @@
         "sass"
     ],
     "[scss]": {
-        "editor.formatOnSave": true,
         "editor.defaultFormatter": "stylelint.vscode-stylelint"
     },
     "[css]": {
-        "editor.formatOnSave": true,
         "editor.defaultFormatter": "stylelint.vscode-stylelint"
     },
-    "eslint.alwaysShowStatus": true,
     "files.eol": "\n",
     "files.associations": {
         "*.js": "javascript",
