@@ -1,0 +1,15 @@
+# Stuff
+.pnpm-store
+
+# build assets
+dist/
+es/
+lib/
+cjs/
+umd/
+
+# dependency
+node_modules
+
+# cache 
+.npm
