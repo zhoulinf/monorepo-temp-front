@@ -1,0 +1,15 @@
+/.husky/*
+/.vscode/*
+/bin
+node_modules/*
+/build/
+.pnpm-store/
+lib/
+es/
+umd/
+dist/
+/docs/*
+/html/*
+/dist/*
+/public/*
+/scripts/*
