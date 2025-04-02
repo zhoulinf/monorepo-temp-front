@@ -16,11 +16,11 @@
 
 代码没有错误继续提交会通过commitlint校验提交信息格式，格式如下
 
-`
+```
 <type>(<scope>): <subject>
 <body>
 <footer>
-`
+```
 
 git commit -m "feat:xxx"
 
