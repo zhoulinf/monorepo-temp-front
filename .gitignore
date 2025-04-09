@@ -2,11 +2,9 @@
 .pnpm-store
 
 # build assets
-dist/
-es/
-lib/
-cjs/
-umd/
+dist
+es
+
 
 # dependency
 node_modules

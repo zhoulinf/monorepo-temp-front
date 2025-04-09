@@ -1,28 +1,67 @@
 module.exports = {
-  extends: [
-    'eslint:recommended',
-    'standard',
-    'plugin:@typescript-eslint/recommended'
+  root: true,
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'airbnb', 'airbnb/hooks', 'plugin:react/jsx-runtime'],
+  plugins: [
+    'react',
+    '@typescript-eslint',
   ],
   parser: '@typescript-eslint/parser',
-  plugins: [
-    '@typescript-eslint'
-  ],
-  rules: {
-    semi: ['error', 'always'], // 强制使用分号
-    quotes: ['error', 'single'], // 强制使用单引号
-    'no-unused-vars': ['warn', { vars: 'all', args: 'after-used', ignoreRestSiblings: false }], // 不允许未使用的变量
-    eqeqeq: ['error', 'always'], // 强制使用全等
-    'no-trailing-spaces': 'error', // 不允许有尾随空格
-    indent: ['error', 2], // 强制使用2个空格的缩进
-    'brace-style': ['error', '1tbs', { allowSingleLine: true }], // 强制使用一种大括号风格
-    curly: ['error', 'all'] // 强制所有控制语句使用一致的大括号风格
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
   },
-  ignorePatterns: [
-    'node_modules/',
-    'dist/',
-    'build/',
-    '.pnpm-store/',
-    '*.min.js'
-  ]
+  env: {
+    browser: true,
+    node: true,
+    es6: true,
+  },
+  settings: {
+    'import/resolver': {
+      alias: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'], // Add any extensions you are using
+      },
+    },
+    react: {
+      version: 'detect',
+    },
+  },
+  rules: {
+    // 禁止console
+    'no-console': 'error',
+    'no-unused-vars': 'off', // 关闭默认的 no-unused-vars
+    // react规则
+    'react/jsx-filename-extension': [
+      'error',
+      {
+        extensions: ['.js', '.jsx', '.tsx'],
+      },
+    ],
+    'react/react-in-jsx-scope': 'off',
+    'react/function-component-definition': [
+      'error',
+      {
+        namedComponents: 'function-declaration',
+        unnamedComponents: 'arrow-function',
+      },
+    ],
+    // 模块引入
+    'import/no-extraneous-dependencies': 'off',
+    'import/prefer-default-export': 'off',
+    'import/no-unresolved': 'off',
+    'import/extensions': 'off',
+
+    // 无障碍
+    'jsx-a11y/anchor-is-valid': 'off',
+    'jsx-a11y/label-has-associated-control': [
+      'error',
+      {
+        labelComponents: [], // 允许默认的 <label>
+      },
+    ],
+    // typescript
+    '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    // 允许非空断言
+    '@typescript-eslint/no-non-null-assertion': 'off',
+  },
 };

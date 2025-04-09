@@ -5,6 +5,6 @@
         "eamodio.gitlens",
         "stylelint.vscode-stylelint",
         "adam-bender.commit-message-editor",
-        "joshbolduc.commitlint"
+        "joshbolduc.commitlint",
     ]
 }

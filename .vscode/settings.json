@@ -1,9 +1,9 @@
 {
-    "editor.formatOnSave": false,
     "editor.formatOnSaveMode": "file",
     "eslint.format.enable": true,
     "editor.codeActionsOnSave": {
         "source.fixAll": "explicit",
+        "source.fixAll.stylelint": "explicit"
     },
     "eslint.validate": [
         "javascript",
@@ -28,12 +28,14 @@
         "sass"
     ],
     "[scss]": {
-        "editor.defaultFormatter": "stylelint.vscode-stylelint"
+        "editor.defaultFormatter": "vscode.css-language-features"
     },
     "[css]": {
         "editor.defaultFormatter": "stylelint.vscode-stylelint"
     },
-    "files.eol": "\n",
+    "files.eol": "\n", // 强制使用 LF
+    "files.autoSave": "afterDelay",
+    "editor.formatOnSave": true,
     "files.associations": {
         "*.js": "javascript",
         "*.jsx": "javascriptreact",

@@ -1,40 +1,46 @@
 {
-  "name": "chat",
+  "name": "projects",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "private": true,
   "scripts": {
-    "lint": "eslint . --ext .js,.ts,.tsx,.vue --fix",
-    "lint:style": "stylelint '**/*.{css,scss}' --fix",
-    "commit": "commit",
-    "prepare": "husky && husky install"
+    "hu": "husky install",
+    "stylelint": "npx stylelint '**/*.[s]css' --fix",
+    "lint": "eslint './**/*.{js,ts,tsx}' --fix",
+    "lint:check": "eslint './**/*.{js,ts,tsx}'",
+    "type:check": "tsc --noEmit"
   },
   "keywords": [],
-  "author": "zhoulinfeng",
-  "engines": {
-    "node": ">=20.16.0",
-    "pnpm": ">=9.6.0"
-  },
+  "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@commitlint/cli": "^19.3.0",
-    "@commitlint/config-conventional": "^19.2.2",
-    "@commitlint/prompt-cli": "^19.3.1",
-    "@typescript-eslint/eslint-plugin": "^8.0.0",
-    "@typescript-eslint/parser": "^8.0.0",
-    "eslint": "^8.2.0",
-    "eslint-config-standard": "^17.1.0",
-    "husky": "^8.0.0",
-    "lint-staged": "^15.2.8",
-    "postcss-sass": "^0.5.0",
-    "postcss-scss": "^4.0.6",
-    "stylelint": "^14.6.0",
-    "stylelint-config-standard": "^29.0.0",
-    "stylelint-config-standard-scss": "^5.0.0"
-  },
   "lint-staged": {
-    "*.{vue,css,less}": "stylelint --fix",
-    "*.{ts,tsx,js,jsx,cjs,mjs,vue}": "eslint --fix"
+    "*.{js,vue,jsx,tsx}": [
+      "eslint"
+    ],
+    "*.{scss,css}": [
+      "stylelint"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@typescript-eslint/eslint-plugin": "^8.29.1",
+    "@typescript-eslint/parser": "^8.29.1",
+    "eslint": "8.57.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "4.3.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
+    "stylelint": "^16.17.0",
+    "stylelint-config-standard": "^37.0.0",
+    "stylelint-config-standard-scss": "^14.0.0"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   }
 }
