@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'airbnb', 'airbnb/hooks', 'plugin:react/jsx-runtime'],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react/jsx-runtime', 'airbnb', 'airbnb/hooks'],
   plugins: [
     'react',
     '@typescript-eslint',
@@ -30,17 +30,20 @@ module.exports = {
     'no-console': 'error',
     'no-unused-vars': 'off', // 关闭默认的 no-unused-vars
     // react规则
+    'react/jsx-closing-bracket-location': ['error', 'tag-aligned'],
+    'react/prop-types': 'off',
     'react/jsx-filename-extension': [
       'error',
       {
         extensions: ['.js', '.jsx', '.tsx'],
       },
     ],
+    'react/jsx-props-no-spreading': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/function-component-definition': [
       'error',
       {
-        namedComponents: 'function-declaration',
+        namedComponents: ['function-declaration', 'arrow-function'],
         unnamedComponents: 'arrow-function',
       },
     ],
@@ -63,6 +66,7 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     // 允许非空断言
     '@typescript-eslint/no-non-null-assertion': 'off',
+
     'arrow-body-style': ['error', 'as-needed'],
   },
 };
