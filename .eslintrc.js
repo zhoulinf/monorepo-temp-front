@@ -29,9 +29,11 @@ module.exports = {
     // 禁止console
     'no-console': 'error',
     'no-unused-vars': 'off', // 关闭默认的 no-unused-vars
+    'no-unused-expressions': ['error', { allowShortCircuit: true }],
     // react规则
     'react/jsx-closing-bracket-location': ['error', 'tag-aligned'],
     'react/prop-types': 'off',
+    'react/require-default-props': 'off',
     'react/jsx-filename-extension': [
       'error',
       {
@@ -66,6 +68,10 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     // 允许非空断言
     '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/no-unused-expressions': [
+      'error',
+      { allowShortCircuit: true },
+    ],
 
     'arrow-body-style': ['error', 'as-needed'],
   },
