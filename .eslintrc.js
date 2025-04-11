@@ -63,5 +63,6 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     // 允许非空断言
     '@typescript-eslint/no-non-null-assertion': 'off',
+    'arrow-body-style': ['error', 'as-needed'],
   },
 };
